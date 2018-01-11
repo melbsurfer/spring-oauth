@@ -12,8 +12,23 @@
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Demo</h1>
-<p>Woot woot this works!</p>
+<div class="container unauthenticated">
+    With Facebook: <a href="/login">click here</a>
+</div>
+<div class="container authenticated" style="display:none">
+    Logged in as: <span id="user"></span>
+    <div>
+        <button onClick="logout()" class="btn btn-primary">Logout</button>
+    </div>
+</div>
+<h1>Spring Security App</h1>
 <div class="container"></div>
+<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.userAuthentication.details.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
 </body>
 </html>
