@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Spring Security App</title>
+    <title>Demo</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
     <base href="/"/>
@@ -17,11 +17,9 @@
 </div>
 <div class="container authenticated" style="display:none">
     Logged in as: <span id="user"></span>
-    <div>
-        <button onClick="logout()" class="btn btn-primary">Logout</button>
-    </div>
 </div>
-<h1>Spring Security App</h1>
+<h1>Demo</h1>
+<p>Woot woot this works!</p>
 <div class="container"></div>
 <script type="text/javascript">
     $.get("/user", function(data) {
